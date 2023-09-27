@@ -34,4 +34,14 @@ public class HomePage extends BasePage{
 
         return new JSExecutor(driver);
     }
+
+    @FindBy(css = "a[href='/broken_images']")
+    WebElement elements;
+    public HomePage getElements() {
+        clickWithJSExecutor(elements,0,200);
+        return new HomePage(driver);
+    }
+
+    public void selectBrokenLinksImages() {
+    }
 }
